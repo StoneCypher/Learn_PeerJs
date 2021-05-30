@@ -4,9 +4,11 @@ var learn_peerjs = (function (exports) {
     var ts = {};
 
     Object.defineProperty(ts, "__esModule", { value: true });
-    exports.hello = ts.hello = void 0;
+    exports.message = ts.message = exports.hello = ts.hello = void 0;
+    var message = "Hello, world!";
+    exports.message = ts.message = message;
     var hello = function () {
-        return console.log("Hello, world!");
+        return console.log();
     };
     exports.hello = ts.hello = hello;
     window.onload = function () { return hello(); };

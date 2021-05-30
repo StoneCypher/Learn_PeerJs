@@ -1,7 +1,9 @@
 
+const message = "Hello, world!";
+
 const hello = () =>
-  console.log("Hello, world!");
+  console.log();
 
 window.onload = () => hello();
 
-export { hello };
+export { hello, message };
