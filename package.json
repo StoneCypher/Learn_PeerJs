@@ -6,8 +6,9 @@
   "scripts": {
     "clean": "rimraf -f build && rimraf -f dist && rimraf -f docs && mkdir build && mkdir dist && mkdir docs",
     "typescript": "tsc --build tsconfig.json",
-    "site": "cp ./build/ts/index.js docs/ && cp -r src/html/* docs/",
-    "build": "npm run clean && npm run typescript && npm run site",
+    "rollup": "rollup -c",
+    "site": "cp ./build/rollup/index.js docs/ && cp -r src/html/* docs/",
+    "build": "npm run clean && npm run typescript && npm run rollup && npm run site",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,8 +22,12 @@
   },
   "homepage": "https://github.com/StoneCypher/Learn_PeerJs#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@rollup/plugin-replace": "^2.4.2",
     "peerjs": "^1.3.2",
     "rimraf": "^3.0.2",
+    "rollup": "^2.50.4",
     "typescript": "^4.3.2"
   }
 }
