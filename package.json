@@ -1,9 +1,12 @@
 {
   "name": "learn_peerjs",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Learning PeerJs using their public server",
   "main": "index.js",
   "scripts": {
+    "clean": "rimraf -f build && rimraf -f dist && rimraf -f docs && mkdir build && mkdir dist && mkdir docs",
+    "typescript": "tsc --build tsconfig.json",
+    "build": "npm run clean && npm run typescript",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/StoneCypher/Learn_PeerJs/issues"
   },
-  "homepage": "https://github.com/StoneCypher/Learn_PeerJs#readme"
+  "homepage": "https://github.com/StoneCypher/Learn_PeerJs#readme",
+  "devDependencies": {
+    "peerjs": "^1.3.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.3.2"
+  }
 }
