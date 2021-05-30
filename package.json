@@ -1,12 +1,13 @@
 {
   "name": "learn_peerjs",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Learning PeerJs using their public server",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf -f build && rimraf -f dist && rimraf -f docs && mkdir build && mkdir dist && mkdir docs",
     "typescript": "tsc --build tsconfig.json",
-    "build": "npm run clean && npm run typescript",
+    "site": "cp ./build/ts/index.js docs/ && cp -r src/html/* docs/",
+    "build": "npm run clean && npm run typescript && npm run site",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

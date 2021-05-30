@@ -1,4 +1,7 @@
 
-const hello = () => "Hello, world!";
+const hello = () =>
+  console.log("Hello, world!");
+
+window.onload = () => hello();
 
 export { hello };
